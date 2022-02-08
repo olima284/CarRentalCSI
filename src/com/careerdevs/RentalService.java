@@ -38,20 +38,17 @@ public class RentalService {
     }
         System.out.println("All Cars");
 
-        for (int i = 0; i < carStorage.length; i++){
+        for (int i = 0; i < carStorage.length; i++) {
             String carStatus;
-            if(!carStorage[i].isRented()){
+            if(!carStorage[i].isRented()) {
                 carStatus="Available";
             }else{
                 carStatus="Unavailable";
             }
-           // System.out.println("("+(i+1)+")"+carStorage[i].getName());
+            System.out.println( "(" + (i+1) + " )"+ carStorage[i].getName() + " (" + carStatus + ")");
         }
 
-
-
     }
-
 
 }
 
