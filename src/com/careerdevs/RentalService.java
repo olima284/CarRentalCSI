@@ -1,9 +1,15 @@
 package com.careerdevs;
 
+import java.util.Scanner;
+
 public class RentalService {
+
     public static void main(String[] args) {
 
+
+
         System.out.println("Welcome to the Car Rental CLI");
+        mainMenu();
 
         //Car testCar = new Car("Ford", "F156");
         //traditional / standard array
@@ -48,6 +54,56 @@ public class RentalService {
             System.out.println( "(" + (i+1) + " )"+ carStorage[i].getName() + " (" + carStatus + ")");
         }
 
+    }
+
+    public static void mainMenu() {
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Would you like to ....");
+        System.out.println("1)Rent");
+        System.out.println("2) Return");
+        System.out.println("Exit the program");
+        System.out.println("Selection:");
+
+        int mainInput = scan.nextInt();
+        switch(mainInput) {
+            case 1:
+            carsAvailableForRent();
+            break;
+
+            case 2:
+            returnCarsAvailable();
+            break;
+
+            case 3:
+            exitProgram();
+            break;
+
+            default :
+            System.out.println( "return to main menu");
+            mainMenu();
+
+        }
+
+    }
+
+    private static void returnCarsAvailable() {
+       //show return date
+       //make car available
+        // run exit program
+    }
+
+    public static void carsAvailableForRent() {
+        //show available cars
+        //give opp to rent car
+        //take in car info
+        //once car rented need to become unavailable
+        //back main menu
+    }
+
+    public static void exitProgram() {
+        //goodbye note
+        //return to main menu
     }
 
 }
